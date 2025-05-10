@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse - Premium Gaming Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="announcement-content">
+                <p>Free shipping on all orders over $50 | Use code GAME10 for 10% off</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <h1>GameVerse</h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarGames" role="button" data-bs-toggle="dropdown">
+                                    Games
+                                </a>
+                                <ul class="dropdown-menu mega-menu" aria-labelledby="navbarGames">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5>Platforms</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">PC</a></li>
+                                                    <li><a href="#">PlayStation 5</a></li>
+                                                    <li><a href="#">Xbox Series X</a></li>
+                                                    <li><a href="#">Nintendo Switch</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5>Genres</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Adventure</a></li>
+                                                    <li><a href="#">RPG</a></li>
+                                                    <li><a href="#">Strategy</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5>Collections</h5>
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">New Releases</a></li>
+                                                    <li><a href="#">Best Sellers</a></li>
+                                                    <li><a href="#">Coming Soon</a></li>
+                                                    <li><a href="#">Sale</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="featured-menu-image">
+                                                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5d9cbc130191973.617aa5adeb767.jpg" alt="Featured Game">
+                                                    <p>Featured Game: Horizon III</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarAccessories" role="button" data-bs-toggle="dropdown">
+                                    Accessories
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarAccessories">
+                                    <li><a class="dropdown-item" href="#">Controllers</a></li>
+                                    <li><a class="dropdown-item" href="#">Headsets</a></li>
+                                    <li><a class="dropdown-item" href="#">Gaming Chairs</a></li>
+                                    <li><a class="dropdown-item" href="#">Keyboards & Mice</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Merch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">News</a>
+                            </li>
+                        </ul>
+                        <div class="header-icons">
+                            <a href="#" class="icon-link">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <a href="#" class="icon-link">
+                                <i class="fas fa-user"></i>
+                            </a>
+                            <a href="#" class="icon-link cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="hero-content">
+                                <h1>Next-Gen Gaming Experience</h1>
+                                <p>Discover the latest games, consoles, and accessories all in one place</p>
+                                <a href="#" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="hero-image">
+                                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5d9cbc130191973.617aa5adeb767.jpg" alt="Latest Gaming Console" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <span class="hero-dot active"></span>
+            <span class="hero-dot"></span>
+            <span class="hero-dot"></span>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Shop By Category</h2>
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://plus.unsplash.com/premium_photo-1682141878168-5dace8e1785d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FtaW5nJTIwcGN8ZW58MHx8MHx8fDA%3D" alt="PC Games" class="img-fluid" style="height: 175px;">
+                        </div>
+                        <h3>PC Games</h3>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://media.istockphoto.com/id/1324673294/photo/video-gaming-console-man-playing-rpg-strategy-game.jpg?s=612x612&w=0&k=20&c=hTsYdDLbNKnE5gxeY8Yc4-5drqzsK2DiYzu1vdkMAOI=" alt="Console Games" class="img-fluid" style="height: 175px;">
+                        </div>
+                        <h3>Console Games</h3>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://img.freepik.com/free-photo/view-neon-illuminated-gaming-desk-setup-with-keyboard_23-2149529379.jpg" alt="Gaming Accessories" class="img-fluid" style="height: 175px;">
+                        </div>
+                        <h3>Accessories</h3>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" class="category-card">
+                        <div class="category-image">
+                            <img src="https://c4.wallpaperflare.com/wallpaper/151/615/673/cityscape-call-of-duty-video-games-wallpaper-preview.jpg" alt="Gaming Merchandise" class="img-fluid" style="height: 175px;">
+                        </div>
+                        <h3>Merchandise</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Games</h2>
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://img.gg.deals/ce/2b/5e531c66d254c98f23b4e2f7f423eded8c84_1920xt1080_S1000.jpg" alt="Game 1" class="img-fluid w-100" >
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cyber Warriors 2077</h3>
+                            <div class="product-category">PC, PS5, Xbox</div>
+                            <div class="product-price">$59.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-badge best-seller">Best Seller</div>
+                        <div class="product-image">
+                            <img src="https://i.ytimg.com/vi/RQ77kQmR51c/maxresdefault.jpg" alt="Game 2" class="img-fluid w-100">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Galaxy Legend</h3>
+                            <div class="product-category">PC, PS5</div>
+                            <div class="product-price">$49.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://i.ytimg.com/vi/GrFmKP4iL9c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDjL9pKC-Npw0uGbzWzHLz10EjTKQ" alt="Game 3" class="img-fluid w-100">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Assassin's Quest</h3>
+                            <div class="product-category">PC, PS5, Xbox, Switch</div>
+                            <div class="product-price">$39.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <img src="https://p.turbosquid.com/ts-thumb/xW/EF5Soy/h82fEZQP/screenshot_1/jpg/1441027980/1920x1080/fit_q87/48dd9af2cd034b5bd4aba7ae9ac175a636f15311/screenshot_1.jpg" alt="Game 4" class="img-fluid w-100">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Fantasy World III</h3>
+                            <div class="product-category">PC, Xbox</div>
+                            <div class="product-price"><span class="original-price">$59.99</span> $29.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary">View More Games</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3>New Releases</h3>
+                            <p>Check out the latest games hitting the shelves</p>
+                            <a href="#" class="btn btn-light">Shop Now</a>
+                        </div>
+                        <div class="promo-image">
+                            <img src="https://www.shutterstock.com/shutterstock/videos/3724153535/thumb/1.jpg?ip=x480" alt="New Releases" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="promo-card special">
+                        <div class="promo-content">
+                            <h3>Special Deals</h3>
+                            <p>Save big on selected games and accessories</p>
+                            <a href="#" class="btn btn-light">View Deals</a>
+                        </div>
+                        <div class="promo-image">
+                            <img src="https://media.istockphoto.com/id/1170073824/photo/gamer-work-space-concept-top-view-a-gaming-gear-mouse-keyboard-joystick-headset-mobile.jpg?s=612x612&w=0&k=20&c=2d8z6CmJn6R1GaPpJ4HB4J43y4e0wOL4nusPM2Dhq34=" alt="Special Deals" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Trending Accessories</h2>
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.ctfassets.net/w5r1fvmogo3f/40J73mEBQk5Mdm3aTfCnHq/990bffb51303d4b32541904d105c73d1/whats_new_lp_an5_d.png?fm=webp&q=90&fit=scale&w=1920" alt="Gaming Headset" class="img-fluid">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Pro Gaming Headset</h3>
+                            <div class="product-category">Accessories</div>
+                            <div class="product-price">$129.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://t3.ftcdn.net/jpg/12/05/17/18/360_F_1205171885_uVOyREiG59cOGQK1RrjpOsstV3esvmWu.jpg" alt="Gaming Mouse" class="img-fluid">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">RGB Gaming Mouse</h3>
+                            <div class="product-category">Accessories</div>
+                            <div class="product-price">$59.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-badge best-seller">Best Seller</div>
+                        <div class="product-image">
+                            <img src="https://assets.xboxservices.com/assets/57/a6/57a6f2f8-4978-495a-acf1-4a0878ae4861.jpg?n=999666_Custom-Hero-1400_1920x1237.jpg" alt="Controller" class="img-fluid">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Elite Controller</h3>
+                            <div class="product-category">Accessories</div>
+                            <div class="product-price">$149.99</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT74vpYxE3nx5eR5Vpu8Q6PIEQHG7sPPSGUEUUV0n6S-jktW56O2vpQUK_kpUljwA3-KL4&usqp=CAU" alt="Gaming Keyboard" class="img-fluid">
+                            <div class="product-actions">
+                                <button class="action-btn"><i class="fas fa-cart-plus"></i></button>
+                                <button class="action-btn"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Mechanical Keyboard</h3>
+                            <div class="product-category">Accessories</div>
+                            <div class="product-price"><span class="original-price">$129.99</span> $89.99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary">View All Accessories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Brands -->
+   <section class="product-showcase-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Featured Products</h2>
+        <div class="product-showcase-grid">
+            <div class="featured-product" data-aos="fade-right">
+                <div class="featured-image">
+                    <img src="https://media.istockphoto.com/id/1393796813/photo/friends-playing-computer-game.jpg?s=612x612&w=0&k=20&c=2UmNQg61SF2npo6s0tHtKdIrWCilYmX38m6IWrgnr5A=" alt="Featured Product">
+                </div>
+                <div class="featured-info">
+                    <h3>Awesome Gaming Headset</h3>
+                    <p class="description">Experience immersive sound with this high-quality gaming headset. Comfortable for long gaming sessions.</p>
+                    <p class="price">$49.99</p>
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+            </div>
+
+            <div class="product-grid" data-aos="fade-left">
+                <div class="product-card-small">
+                    <div class="card-image">
+                        <img src="https://www.digitaltrends.com/wp-content/uploads/2018/08/mx-vertical-4.jpg?resize=1200%2C720&p=1" alt="Product 1">
+                        <div class="overlay">
+                            <h4>Ergonomic Mouse</h4>
+                            <p>Comfortable design for daily use.</p>
+                            <button class="btn btn-outline-primary btn-sm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card-small">
+                    <div class="card-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1664194583917-b0ba07c4ce2a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVjaGFuaWNhbCUyMGtleWJvYXJkfGVufDB8fDB8fHww" alt="Product 2">
+                        <div class="overlay">
+                            <h4>Mechanical Keyboard</h4>
+                            <p>Responsive keys for fast typing.</p>
+                            <button class="btn btn-outline-primary btn-sm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card-small">
+                    <div class="card-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRs5nhU6r_703NClEuYcjSPO8fLt_K-tj2jQ&s" alt="Product 3">
+                        <div class="overlay">
+                            <h4>Gaming Mousepad</h4>
+                            <p>Smooth surface for precise control.</p>
+                            <button class="btn btn-outline-primary btn-sm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card-small">
+                    <div class="card-image">
+                        <img src="https://gamesir.com/cdn/shop/files/nova-1920_01.jpg?v=1737554885" alt="Product 4">
+                        <div class="overlay">
+                            <h4>Wireless Controller</h4>
+                            <p>Enjoy gaming without wires.</p>
+                            <button class="btn btn-outline-primary btn-sm">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- testimonials -->
+ <section class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">GameVerse Users</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-aos="fade-up">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100/FF6B6B/FFFFFF" alt="User 1" class="testimonial-avatar">
+                        <p class="testimonial-text">"GAMEVERSE ne meri gaming ko ek naya roop diya hai!  Mujhe apne setup ke liye ekdam sahi console aur accessories mile. Next-gen gaming ka anubhav sach mein yahan hai."</p>
+                        <h3 class="testimonial-name">Sarah M.</h3>
+                        <p class="testimonial-designation">Gamer</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100/42A5F5/FFFFFF" alt="User 2" class="testimonial-avatar">
+                        <p class="testimonial-text">"Mujhe GAMEVERSE ka sab kuch ek jagah milna bahut pasand hai.  Naye games khojne aur latest trends par updated rehne ke liye yeh meri favourite jagah hai."</p>
+                        <h3 class="testimonial-name">John K.</h3>
+                        <p class="testimonial-designation">Game Enthusiast</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/100/66BB6A/FFFFFF" alt="User 3" class="testimonial-avatar">
+                        <p class="testimonial-text">"GAMEVERSE se mujhe jo chahiye woh aasani se mil jata hai.  Gaming ki har cheez ke liye ek shandar one-stop shop. Accessories ka selection bhi kamaal ka hai!"</p>
+                        <h3 class="testimonial-name">Emily L.</h3>
+                        <p class="testimonial-designation">Console Gamer</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <ol class="carousel-indicators">
+                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>GameVerse</h3>
+                        <p>Your one-stop destination for all your gaming needs.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">PC Games</a></li>
+                            <li><a href="#">Console Games</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Gaming Street, City, Country</li>
+                            <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                            <li><i class="fas fa-envelope"></i> info@gameverse.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 GameVerse. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-methods">
+                            <span>We accept:</span>
+                            <i class="fa-brands fa-cc-visa" alt="Visa"></i> 
+                            <i class="fa-brands fa-cc-mastercard" alt="MasterCard"></i>
+                             <i class="fa-brands fa-paypal" alt="PayPal"></i>
+                             <i class="fa-brands fa-apple-pay" alt="Apple Pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart will be populated via JavaScript -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <a href="#" class="btn btn-primary">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price">$0.00</span>
+            </div>
+            <a href="#" class="btn btn-primary checkout-btn">Checkout</a>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
