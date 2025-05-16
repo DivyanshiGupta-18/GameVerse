@@ -1,7 +1,7 @@
 /* Reset and Base Styles */
 :root {
-    --primary-color: #6c5ce7;
-    --primary-hover: #5649c0;
+    --primary-color: #003092;
+    --primary-hover: #002570;
     --secondary-color: #00cec9;
     --dark-color: #2d3436;
     --light-color: #f7f7f7;
@@ -9,7 +9,6 @@
     --success-color: #00b894;
     --warning-color: #fdcb6e;
     --danger-color: #ff7675;
-    --text-color: #2d3436;
     --border-color: #e0e0e0;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
@@ -25,7 +24,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #fff;
+    background-color: #183B4E;
     overflow-x: hidden;
 }
 
@@ -52,21 +51,23 @@ button {
 
 /* Utility Classes */
 .section-title {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    color: #EEEEEE;
     position: relative;
-    color: var(--dark-color);
+    animation: fadeIn 0.8s ease-out;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--primary-color);
-    margin: 10px auto 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
 
 /* Announcement Bar */
@@ -83,19 +84,20 @@ button {
 }
 
 /* Header */
+
 .site-header {
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    background: #fff;
+    background-color: #25394e;
     z-index: 1000;
 }
 
 .navbar-brand h1 {
     font-size: 1.8rem;
     margin: 0;
-    color: var(--primary-color);
+    color: aliceblue;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
@@ -103,7 +105,7 @@ button {
 .nav-link {
     font-weight: 500;
     padding: 0.5rem 1rem;
-    color: var(--dark-color);
+    color: #FAFAFA;
     position: relative;
 }
 
@@ -112,16 +114,21 @@ button {
     position: absolute;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background-color: #F5EFE7;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     transition: width var(--transition-speed) ease;
 }
 
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: #DFF2EB;
+}
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 70%;
+    
 }
 
 .dropdown-toggle::after {
@@ -130,8 +137,8 @@ button {
 }
 
 .mega-menu {
-    width: 100%;
-    border-radius: 0;
+    width: 75%;
+    border-radius: 0 40px;
     margin-top: 0;
     padding: 20px 0;
     border: none;
@@ -180,7 +187,7 @@ button {
 
 .icon-link {
     font-size: 1.2rem;
-    color: var(--dark-color);
+    color: #EEEEEE;
     margin-left: 20px;
     position: relative;
     transition: color var(--transition-speed) ease;
@@ -198,7 +205,7 @@ button {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: var(--primary-color);
+    background-color: #F5EFE7;
     color: white;
     font-size: 0.7rem;
     width: 18px;
@@ -214,7 +221,9 @@ button {
     position: relative;
     overflow: hidden;
     padding: 30px 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    background-color: #213448;
+    /* opacity: 0.4;
+    background: url("https://e1.pxfuel.com/desktop-wallpaper/778/204/desktop-wallpaper-gold-and-black-smoke-3-backgrounds-blue-gaming-thumbnail.jpg"); */
 }
 
 .hero-slider {
@@ -244,7 +253,7 @@ button {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: var(--dark-color);
+    color: #EEEEEE;
     line-height: 1.2;
 }
 
@@ -285,7 +294,7 @@ button {
 }
 
 .hero-dot.active {
-    background: var(--primary-color);
+    background-color: #F5EFE7;
     transform: scale(1.2);
 }
 
@@ -332,7 +341,7 @@ button {
 .category-card h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--dark-color);
+    color: #EEEEEE;
     margin-top: 10px;
 }
 
@@ -340,29 +349,30 @@ button {
 .featured-products,
 .trending-products {
     padding: 70px 0 50px;
-    background-color: var(--light-color);
+    background-color: #213448;
 }
 
 .product-card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 30px;
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: scaleIn 0.6s ease-out;
     position: relative;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .product-badge {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: var(--primary-color);
+    background-color: rgb(199, 199, 26);
     color: white;
     padding: 5px 10px;
     font-size: 0.8rem;
@@ -383,16 +393,26 @@ button {
     overflow: hidden;
 }
 
+.product-image img {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
 .product-actions {
     position: absolute;
-    bottom: -50px;
+    bottom: -60px;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.9);
-    transition: bottom var(--transition-speed) ease;
+    gap: 10px;
+    padding: 5px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    transition: bottom 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .product-card:hover .product-actions {
@@ -400,21 +420,20 @@ button {
 }
 
 .action-btn {
-    background: var(--dark-color);
-    color: white;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
-    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    transition: all 0.3s ease;
 }
 
 .action-btn:hover {
-    background: var(--primary-color);
-    transform: translateY(-5px);
+    background: var(--primary-hover);
+    transform: translateY(-3px);
 }
 
 .product-info {
@@ -512,7 +531,7 @@ button {
 /* Product Showcase Section */
 .product-showcase-section {
     padding: 70px 0;
-    background-color: var(--light-color);
+    background-color: #2D336B;
 }
 
 .product-showcase-grid {
@@ -554,7 +573,7 @@ button {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--dark-color);
+    color: #EEEEEE;
 }
 
 .featured-info .description {
@@ -572,8 +591,8 @@ button {
 /* Product Grid 
 /* Product Showcase Section */
 .product-showcase-section {
-    padding: 60px 0; /* Thoda padding kam kiya */
-    background-color: var(--light-color);
+    padding: 60px 0; 
+    background-color: #3E5879;
 }
 
 .product-showcase-grid {
@@ -618,7 +637,7 @@ button {
     font-size: 1.4rem; /* Thoda font size kam */
     font-weight: 600;
     margin-bottom: 8px; /* Kam margin */
-    color: var(--dark-color);
+    color: #EEEEEE;
 }
 
 .featured-info .description {
@@ -742,7 +761,7 @@ button {
 /* Testimonials */
 .testimonials-section {
     padding: 70px 0;
-    background-color: var(--light-color);
+    background-color: #213448;
     text-align: center;
 }
 
@@ -778,7 +797,7 @@ button {
 .testimonial-name {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--dark-color);
+    color: #EEEEEE;
     margin-bottom: 5px;
 }
 
@@ -804,7 +823,7 @@ button {
 
 
 .carousel-indicators {
-    bottom: 0;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 20px;
@@ -858,7 +877,7 @@ button {
 
 /* Footer */
 .site-footer {
-    background-color: var(--dark-color);
+    background-color: #25394e;
     color: white;
     padding: 70px 0 0;
 }
@@ -904,7 +923,7 @@ button {
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
+    background-color: #F5EFE7;
 }
 
 .footer-links {
@@ -946,7 +965,7 @@ button {
 }
 
 .footer-bottom {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: #213448;
     padding: 20px 0;
     margin-top: 40px;
 }
@@ -980,9 +999,10 @@ button {
     right: -400px;
     width: 400px;
     height: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
     z-index: 2000;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
     transition: right var(--transition-speed) ease;
     display: flex;
     flex-direction: column;
@@ -1009,7 +1029,7 @@ button {
 .close-cart {
     background: none;
     font-size: 1.2rem;
-    color: var(--dark-color);
+    color: #EEEEEE;
     transition: color var(--transition-speed) ease;
 }
 
@@ -1082,22 +1102,23 @@ button {
 
 /* Button Styles */
 .btn {
-    padding: 12px 25px;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all var(--transition-speed) ease;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-hover));
+    border: none;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 48, 146, 0.3);
 }
 
 .btn-outline-primary {
@@ -1114,7 +1135,7 @@ button {
 
 .btn-light {
     background-color: white;
-    color: var(--dark-color);
+    color: #EEEEEE;
 }
 
 .btn-light:hover {
@@ -1156,23 +1177,18 @@ button {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideInRight {
-    from { transform: translateX(50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
-@keyframes slideInLeft {
-    from { transform: translateX(-50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 /* Responsive Styles */
