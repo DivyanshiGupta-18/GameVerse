@@ -504,34 +504,44 @@ class UI {
 }
 
 // for testmoinal carousel
-function addCustomSlickAttributes() {
-  $("[data-my-slick-attr]").removeAttr("data-my-slick-attr");
-
-  $(".slick-active").each(function (index, el) {
-    $(el).attr("data-my-slick-attr", index);
-  });
-}
-
-$(".slider").on("init", function (event, slick) {
-  addCustomSlickAttributes();
-});
-$(document).ready(function () {
-  $("#testimonialCarousel").carousel({
-    interval: 5000,
-    ride: "carousel",
-  });
-});
-$(".slider").slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: ".slider-for",
-  dots: true,
-  focusOnSelect: true,
+document.addEventListener('DOMContentLoaded', function() {
+    const myCarousel = new bootstrap.Carousel('#testimonialCarousel', {
+        interval: 5000,
+        ride: 'carousel',
+        wrap: true
+    });
 });
 
-$(".slider").on(
-  "afterChange",
-  function (event, slick, current_slide_index, next_slide_index) {
-    addCustomSlickAttributes();
-  }
-);
+
+
+
+
+
+
+ // Get references to navbar links
+  document.addEventListener("DOMContentLoaded", function() {
+            // Get references to navbar links
+            const featuredProductsLink = document.getElementById('featuredProducts');
+            const tournamentLink = document.getElementById('tournament');
+            
+            // Add event listeners for smooth scroll
+            if (featuredProductsLink) {
+                featuredProductsLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const featuredSection = document.getElementById('featuredSection');
+                    if (featuredSection) {
+                        featuredSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+            
+            if (tournamentLink) {
+                tournamentLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const tournamentSection = document.getElementById('tournamentS');
+                    if (tournamentSection) {
+                        tournamentSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            }
+        });

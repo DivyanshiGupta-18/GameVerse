@@ -224,7 +224,7 @@ button {
     top: -8px;
     right: -8px;
     background-color: #F5EFE7;
-    color: white;
+    color: rgb(235, 33, 7);
     font-size: 0.7rem;
     width: 18px;
     height: 18px;
@@ -1010,7 +1010,7 @@ button {
 
 .upcoming-card .card-meta {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: 15px;
   opacity: 0.8;
 }
 
@@ -1527,7 +1527,6 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    /* Thoda kam transparent */
     color: white;
     display: flex;
     flex-direction: column;
@@ -1537,12 +1536,10 @@ button {
     transition: opacity 0.2s ease-in-out;
     text-align: center;
     padding: 15px;
-    /* Kam padding */
 }
 
 .product-card-small:hover .card-image img {
     opacity: 0.6;
-    /* Thoda kam opaque */
 }
 
 .product-card-small:hover .overlay {
@@ -1551,30 +1548,24 @@ button {
 
 .product-card-small .overlay h4 {
     font-size: 0.9rem;
-    /* Aur kam font size */
     font-weight: 600;
     margin-bottom: 8px;
-    /* Kam margin */
 }
 
 .product-card-small .overlay p {
     font-size: 0.8rem;
     margin-bottom: 10px;
-    /* Kam margin */
     line-height: 1.4;
 }
 
 .btn-sm {
     padding: 6px 12px;
-    /* Aur kam padding */
     font-size: 0.75rem;
 }
 
-/* Responsive Layout */
 @media (max-width: 991px) {
     .product-showcase-grid {
         grid-template-columns: 1fr;
-        /* Stack on smaller screens */
     }
 
     .product-grid {
@@ -1585,31 +1576,32 @@ button {
 @media (max-width: 767px) {
     .product-grid {
         grid-template-columns: 1fr;
-        /* Stack on even smaller screens */
         grid-gap: 10px;
-        /* Aur kam gap on very small screens */
     }
 
     .product-card-small {
         height: auto;
-        /* Auto height on very small screens */
     }
 }
 
 
 
 /* Testimonials */
+/* Testimonials */
 .testimonials-section {
     padding: 70px 0;
     text-align: center;
+    position: relative;
+    background-color: #f8f9fa;
 }
 
 .testimonial-card {
     background: #fff;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 5px 15px var(--shadow-color);
-    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1624,25 +1616,27 @@ button {
     border-radius: 50%;
     margin-bottom: 20px;
     object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 .testimonial-text {
     font-size: 1rem;
-    color: var(--text-color);
+    color: #333;
     margin-bottom: 20px;
     line-height: 1.6;
+    font-style: italic;
 }
 
 .testimonial-name {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #EEEEEE;
     margin-bottom: 5px;
 }
 
 .testimonial-designation {
     font-size: 0.9rem;
-    color: var(--gray-color);
+    color: #6c757d;
 }
 
 /* Carousel adjustments */
@@ -1657,56 +1651,61 @@ button {
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 5%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
 }
 
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
 .carousel-indicators {
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
+    position: relative;
+    margin-top: 30px;
+    bottom: auto;
 }
 
-.carousel-indicators li {
+.carousel-indicators button {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--gray-color);
+    background-color: #6c757d;
     opacity: 0.7;
     border: none;
     margin: 0 5px;
 }
 
-.carousel-indicators li.active {
-    background-color: var(--primary-color);
+.carousel-indicators button.active {
+    background-color: #0d6efd;
     opacity: 1;
-}
-
-@media (max-width: 768px) {
-    .carousel-inner {
-        padding: 0 10px;
-    }
-
-    .testimonial-card {
-        padding: 20px;
-    }
 }
 
 /* Custom colors for each card */
 .carousel-item:nth-child(1) .testimonial-card {
     border-left: 4px solid #FF6B6B;
-    /* Red */
 }
 
 .carousel-item:nth-child(2) .testimonial-card {
     border-left: 4px solid #42A5F5;
-    /* Blue */
 }
 
 .carousel-item:nth-child(3) .testimonial-card {
     border-left: 4px solid #66BB6A;
-    /* Green */
 }
 
 .carousel-item:nth-child(1) .testimonial-name {
@@ -1721,6 +1720,29 @@ button {
     color: #66BB6A;
 }
 
+@media (max-width: 768px) {
+    .carousel-inner {
+        padding: 0 20px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+}
 
 /* Footer */
 .site-footer {
