@@ -505,13 +505,138 @@ class UI {
 
 // for testmoinal carousel
 document.addEventListener('DOMContentLoaded', function() {
-    const myCarousel = new bootstrap.Carousel('#testimonialCarousel', {
-        interval: 5000,
-        ride: 'carousel',
-        wrap: true
+    const carousel = document.getElementById('testimonialCarousel');
+    const track = carousel.querySelector('.carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+    const indicators = Array.from(carousel.querySelectorAll('.indicator'));
+    const nextButton = carousel.querySelector('.carousel-control-next');
+    const prevButton = carousel.querySelector('.carousel-control-prev');
+    
+    let currentIndex = 0;
+    let autoplayInterval;
+    const autoplayDelay = 5000; // 5 seconds
+    
+    // Update the carousel to show the slide at the current index
+    function updateCarousel() {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Show current slide
+        slides[currentIndex].classList.add('active');
+        
+        // Update indicators
+        indicators.forEach(indicator => {
+            indicator.classList.remove('active');
+        });
+        indicators[currentIndex].classList.add('active');
+        
+        // Update track position to show current slide (100% width per slide)
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update button states
+        updateButtonStates();
+    }
+    
+    // Update button states based on current slide
+    function updateButtonStates() {
+        // Reset button states
+        prevButton.classList.remove('disabled');
+        nextButton.classList.remove('disabled');
+        
+        // Disable previous button on first slide
+        if (currentIndex === 0) {
+            prevButton.classList.add('disabled');
+        }
+        
+        // Disable next button on last slide
+        if (currentIndex === slides.length - 1) {
+            nextButton.classList.add('disabled');
+        }
+    }
+    
+    // Next slide function
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+    
+    // Previous slide function
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+    
+    // Set up event listeners for next/prev buttons
+    nextButton.addEventListener('click', function() {
+        nextSlide();
+        resetAutoplay();
     });
+    
+    prevButton.addEventListener('click', function() {
+        prevSlide();
+        resetAutoplay();
+    });
+    
+    // Set up event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function() {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoplay();
+        });
+    });
+    
+    // Set up autoplay
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, autoplayDelay);
+    }
+    
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+    
+    // Pause autoplay on hover
+    carousel.addEventListener('mouseenter', function() {
+        clearInterval(autoplayInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', function() {
+        startAutoplay();
+    });
+    
+    // Touch support for mobile devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    track.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // Swipe left - next slide
+            nextSlide();
+            resetAutoplay();
+        } else if (touchEndX > touchStartX + swipeThreshold) {
+            // Swipe right - previous slide
+            prevSlide();
+            resetAutoplay();
+        }
+    }
+    
+    // Initialize carousel
+    updateCarousel();
+    startAutoplay();
 });
-
 
 
 
